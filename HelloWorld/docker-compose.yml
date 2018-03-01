@@ -1,0 +1,10 @@
+version: '1'
+helloworld:
+  image: ${DOCKER_REGISTRY}marketing/helloworld:${BUILD_NUMBER}
+  build:
+    context: .
+    dockerfile: HelloWorld/Dockerfile
+    target: release
+    label: ${label1}
+    cpu_quota: 2
+
